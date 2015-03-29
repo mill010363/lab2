@@ -3,6 +3,7 @@
 #include <string>
 #include <iomanip>
 #include "h2.h"
+#include <cstdlib>
 #include <math.h>
 
 using namespace std;
@@ -18,7 +19,7 @@ void BMI::getBMI(){
     while(inFile>>height>>weight){
         if(height==0||weight==0)
             break;
-        outFile<<setw(4)<<setBMI(height,weight)<<" "<<BMICat(setBMI(height,weight))<<endl;
+        outFile<<setw(5)<<setBMI(height,weight)<<" "<<BMICat(setBMI(height,weight))<<endl;
     }
 }
 
